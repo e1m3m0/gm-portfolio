@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'portfolio-footer',
   template: `
-<footer class="d-flex flex-wrap justify-content-between align-items-center py-1 my-2 border-top fixed-bottom">
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-1 my-2 border-top">
     <div class="col-md-4 d-flex align-items-center ms-4">
       <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
       <img class="logo-footer" src="/assets/images/GM.svg" alt="">

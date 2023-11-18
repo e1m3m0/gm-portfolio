@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <div class="row row-cols-auto">
+    <div class="card col-6 p-3 w-50" style="width: 18rem" *ngFor="let project of projectsList" id="{{ project.id }}">
+      <!-- <img class="image fluid" [src]="project.imageURL" alt="Card image cap"> -->
+      <div class="card-header">
+        <h4 class="card-title">{{ splitName(project.name) | titlecase }}</h4>
+      </div>
+      <div class="card-body">
+        <img *ngIf="project.imageURL" class="img-fluid" src="{{project.imageURL}}" alt="">
+        <h5>Project Description:</h5>
+        <p class="card-text">{{project.description}}</p>
+
+        <div *ngIf="project.topics.length > 0">
+          <ul *ngFor="let topic of project.topics" class="list-group list-group-flush">
+            <li class="list-group-item">- {{ topic | uppercase }}</li>
+          </ul>
+        </div>
+        <a href="{{ project.html_url }}" class="btn btn-primary"> <img src="/assets/images/github1.svg" style="width: 25px;" alt="">GitHub Repo
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
